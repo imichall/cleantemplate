@@ -19,28 +19,34 @@
 }
 
 .HeaderLayout_Content {
-    grid-area: content;
+    /* a */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-template-areas:
-        'infoGraphy infoGraphy'
-        'content content ';
-    /* grid-gap: @spacing[5]; */
+        'infoGraphy'
+        'content';
     text-align: center;
+    justify-content: center;
 
     @media @breakpoint-sm-min {
-        grid-template-areas: 'content infoGraphy';
+        grid-template-areas:
+            'content infoGraphy';
         grid-gap: 130px;
         text-align: left;
+        justify-content: center;
     }
 }
 
 .HeaderLayout_Content-Right {
     grid-area: infoGraphy;
     display: grid;
-    justify-self: end;
+    justify-self: center;
 
     img {
         width: 100%;
+    }
+
+    @media @breakpoint-sm-min {
+        justify-self: end;
     }
 }
