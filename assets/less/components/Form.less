@@ -1,4 +1,5 @@
 .Form {
+    position: relative;
     display: flex;
 
     input[type="email"] {
@@ -12,6 +13,15 @@
         &:focus {
             outline: none;
         }
+
+    }
+
+    label.error {
+        @typography-style-input-error();
+
+        position: absolute;
+        left: 5px;
+        bottom: -20px;
     }
 
     input[type="button"] {
@@ -34,6 +44,13 @@
 
       &:invalid:not(:focus):not(:placeholder-shown) {
         background: pink;
+        & + label {
+          opacity: 1;
+        }
+      }
+
+      &:focus:placeholder-shown {
+        background: @ui-colors-primary[white];
         & + label {
           opacity: 0;
         }
