@@ -1,0 +1,59 @@
+// stylelint-disable property-no-unknown
+
+@_spacing-margins: {
+    m: margin;
+    mt: margin-top;
+    mr: margin-right;
+    mb: margin-bottom;
+    ml: margin-left;
+}
+
+@_spacing-paddings: {
+    p: padding;
+    pt: padding-top;
+    pr: padding-right;
+    pb: padding-bottom;
+    pl: padding-left;
+}
+
+.spacing-generate-margin-utilities(@breakpoint: ~'') {
+    each(@_spacing-margins, .(@spacing-name, @spacing-shortcut) {
+        .u@{breakpoint}-@{spacing-shortcut}--auto {
+            @{spacing-name}: auto !important;
+        }
+
+        each(@spacing, {
+
+            .u@{breakpoint}-@{spacing-shortcut}--@{key} {
+                @{spacing-name}: @value !important;
+            }
+
+        });
+    });
+}
+
+.spacing-generate-padding-utilities(@breakpoint: ~'') {
+    each(@_spacing-paddings, .(@spacing-name, @spacing-shortcut) {
+        each(@spacing, {
+
+            .u@{breakpoint}-@{spacing-shortcut}--@{key} {
+                @{spacing-name}: @value !important;
+            }
+
+        });
+    });
+}
+
+.spacing-generate-responsive-utilities() {
+    .spacing-generate-margin-utilities();
+    .spacing-generate-padding-utilities();
+
+    each(@breakpoint-list, {
+        @media-breakpoint: ~"breakpoint-@{key}-min";
+
+        @media @@media-breakpoint {
+            .spacing-generate-margin-utilities(~'-@{key}');
+            .spacing-generate-padding-utilities(~'-@{key}');
+        }
+    });
+}

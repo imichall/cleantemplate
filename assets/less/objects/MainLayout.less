@@ -1,0 +1,29 @@
+.MainLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: @spacing[7];
+
+    @media @breakpoint-sm-min {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 150px;
+    }
+}
+
+.MainLyout_Content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 @spacing[7];
+
+    @media @breakpoint-sm-min {
+        margin: 0;
+        padding-right: @spacing[7];
+        text-align: left;
+    }
+
+}
+
+.Mainlayout_List {
+    display: grid;
+    grid-gap: @spacing[3];
+}

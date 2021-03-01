@@ -1,0 +1,19 @@
+each(@ui-colors-primary, {
+    .h-bgColor--@{key} {
+        background-color: @value
+    }
+
+    .h-perexColor--@{key} {
+        color: @value;
+    }
+});
+
+each(@ui-colors-neutral, {
+    .h-bgColor--@{key} {
+        background-color: @value
+    }
+
+    .h-perexColor--@{key} {
+        color: @value;
+    }
+});

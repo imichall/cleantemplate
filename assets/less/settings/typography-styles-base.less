@@ -1,0 +1,111 @@
+// Base styles are also exposed as helper classes in CSS.
+
+@typography-style-navmenu: {
+    font-family: @typography-font-family-baseBold;
+    font-weight: @typography-font-weight-values[bold];
+    font-size: @typography-scale[m1];
+    color: @ui-colors-primary[darkBlue];
+
+    &:hover {
+        color: @ui-color-primary-hover[link-hover];
+    }
+}
+
+@typography-style-Button: {
+    font-family: @typography-font-family-baseBold;
+    font-weight: @typography-font-weight-values[bold];
+    font-size: @typography-scale[m1];
+    color: @ui-colors-primary[white];
+}
+
+@typography-style-Button-inverted: {
+    font-family: @typography-font-family-baseBold;
+    font-weight: @typography-font-weight-values[bold];
+    font-size: @typography-scale[m1];
+    color: @ui-colors-primary[brighRed];
+}
+
+@typography-style-h1: {
+    font-family: @typography-font-family-baseBold;
+    font-weight: @typography-font-weight-values[bold];
+    font-size: @typography-scale[7];
+    color: @ui-colors-primary[darkBlue];
+}
+
+@typography-style-h2: {
+    font-family: @typography-font-family-baseBold;
+    font-weight: @typography-font-weight-values[bold];
+    font-size: @typography-scale[6];
+    color: @ui-colors-primary[darkBlue];
+    line-height: 1.2em;
+}
+
+@typography-style-h3: {
+    font-family: @typography-font-family-baseMedium;
+    font-weight: @typography-font-weight-values[medium];
+    font-size: @typography-scale[3];
+    color: @ui-colors-primary[darkBlue];
+}
+
+@typography-style-h3-list: {
+    font-family: @typography-font-family-baseMedium;
+    font-weight: @typography-font-weight-values[medium];
+    font-size: @typography-scale[2];
+    color: @ui-colors-primary[darkBlue];
+    margin-bottom: @spacing[4];
+
+    line-height: @size[small];
+}
+
+@typography-style-h4: {
+    font-family: @typography-font-family-baseMedium;
+    font-weight: @typography-font-weight-values[medium];
+    font-size: @typography-scale[2];
+    color: @ui-colors-primary[darkBlue];
+}
+
+@typography-style-perex: {
+    font-family: @typography-font-family-base;
+    font-weight: @typography-font-weight-values[regular];
+    font-size: @typography-scale[0];
+    color: @ui-colors-primary[perex];
+}
+
+@typography-style-cardName: {
+    font-family: @typography-font-family-baseBold;
+    font-weight: @typography-font-weight-values[bold];
+    font-size: @typography-scale[0];
+    color: @ui-colors-primary[darkBlue];
+}
+
+@typography-style-footerLinks: {
+    font-family: @typography-font-family-base;
+    font-weight: @typography-font-weight-values[regular];
+    font-size: @typography-scale[m2];
+    color: @ui-colors-primary[white];
+
+    &:hover {
+        color: @ui-colors-primary[brighRed];
+    }
+}
+
+@typography-style-list: {
+    font-family: @typography-font-family-baseBold;
+    font-weight: @typography-font-weight-values[bold];
+    font-size: @typography-scale[m2];
+    color: @ui-colors-primary[white];
+}
+
+@typography-style-copy: {
+    font-family: @typography-font-family-base;
+    font-weight: @typography-font-weight-values[regular];
+    font-size: @typography-scale[m3];
+    color: darken(@ui-colors-primary[white], 20%);
+}
+
+@typography-style-input-button: {
+    font-family: @typography-font-family-baseBold;
+    font-weight: @typography-font-weight-values[bold];
+    font-size: @typography-scale[m2];
+    color: @ui-colors-primary[white];
+}

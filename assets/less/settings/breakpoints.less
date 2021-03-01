@@ -1,0 +1,16 @@
+@breakpoint-list: {
+    xs: 48em;
+    sm: 64em;
+    md: 86em;
+    lg: 102em;
+}
+
+@_breakpoint-value-xs: @breakpoint-list[xs];
+@_breakpoint-value-sm: @breakpoint-list[sm];
+@_breakpoint-value-md: @breakpoint-list[md];
+@_breakpoint-value-lg: @breakpoint-list[lg];
+
+@breakpoint-xs-min: ~'screen and (min-width: @{_breakpoint-value-xs})';
+@breakpoint-sm-min: ~'screen and (min-width: @{_breakpoint-value-sm})';
+@breakpoint-md-min: ~'screen and (min-width: @{_breakpoint-value-md})';
+@breakpoint-lg-min: ~'screen and (min-width: @{_breakpoint-value-lg})';

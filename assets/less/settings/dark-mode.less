@@ -1,0 +1,10 @@
+@modes: {
+    light-mode: light;
+    dark-mode: dark;
+}
+
+@light-mode: @modes[light-mode];
+@dark-mode: @modes[dark-mode];
+
+@darkmode: ~'screen and (prefers-color-scheme: @{dark-mode})';
+@lightmode: ~'screen and (prefers-color-scheme: @{light-mode})';

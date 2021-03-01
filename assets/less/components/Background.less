@@ -1,0 +1,30 @@
+.Background {
+    position: relative;
+    overflow: hidden;
+
+    @media @breakpoint-sm-min {
+        overflow: unset;
+    }
+}
+
+.Background_Shape::before {
+    content: '';
+    display: flex;
+    position: absolute;
+    left: 250px;
+    top: -350px;
+    background: url('@{svgDir}bg-tablet-pattern.svg') no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    width: 414px;
+    height: 414px;
+    opacity: .8;
+    z-index: -100;
+
+    @media @breakpoint-sm-min {
+        left: -400px;
+        top: 400px;
+        width: 614px;
+        height: 614px;
+    }
+}

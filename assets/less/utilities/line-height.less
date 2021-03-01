@@ -1,0 +1,12 @@
+@size: {
+    small: 1.2em;
+    medium: 1.5em;
+    large: 1.8em;
+    extra: 2.2em;
+}
+
+each(@size, {
+    .h-line-height--@{key} {
+        line-height: @value;
+    }
+});

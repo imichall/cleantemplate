@@ -1,0 +1,30 @@
+.Icon {
+    display: block;
+    width: 100%;
+}
+
+.Icon_Logo {
+    width: 150px;
+    height: 20px;
+}
+
+.Icon_Social {
+    display: inline-flex;
+    margin-right: @spacing[2];
+    width: 20px;
+    height: 20px;
+    color: @ui-colors-primary[white];
+    fill: currentColor;
+    transition-property: color;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+
+    &:hover {
+        color: @ui-colors-primary[brighRed];
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

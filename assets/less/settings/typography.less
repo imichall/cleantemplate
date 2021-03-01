@@ -1,0 +1,35 @@
+// stylelint-disable property-no-unknown
+
+@typography-font-family-base: 'BeVietnam-Regular', helvetica, arial, sans-serif;
+@typography-font-family-baseMedium: 'BeVietnam-Medium', helvetica, arial, sans-serif;
+@typography-font-family-baseMediumItalic: 'BeVietnam-MediumItalic', helvetica, arial, sans-serif;
+@typography-font-family-baseBold: 'BeVietnam-Bold', helvetica, arial, sans-serif;
+@typography-font-family-baseBoldItalic: 'BeVietnam-BoldItalic', helvetica, arial, sans-serif;
+
+@typography-font-weight-values: {
+    regular: 400;
+    medium: 500;
+    bold: 700;
+}
+
+@typography-font-size-root: 100%;
+@typography-line-height-base: 1.875;
+
+// Font sizes are computed from pixels to rem for better connection with design.
+@_typography-font-size-root-in-px: unit(@typography-font-size-root / 100 * 16px);
+@_typography-font-size-precision: 4;
+
+@typography-scale: {
+    m4: unit(round((10 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    m3: unit(round((12 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    m2: unit(round((14 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    m1: unit(round((15 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    0: unit(round((16 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    1: unit(round((18 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    2: unit(round((20 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    3: unit(round((22 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    4: unit(round((25 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    5: unit(round((27 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    6: unit(round((35 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+    7: unit(round((50 / @_typography-font-size-root-in-px), @_typography-font-size-precision), rem);
+}

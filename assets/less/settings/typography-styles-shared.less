@@ -1,0 +1,58 @@
+// Shared styles are reused in multiple components.
+
+.typography-nav-item {
+    @typography-style-navmenu();
+}
+
+.typography-button {
+    @typography-style-Button()
+}
+
+.typography-button--inverted {
+    @typography-style-Button-inverted()
+}
+
+.typography-h1 {
+    @typography-style-h1();
+    line-height: 1.2em;
+    margin-bottom: @spacing[7];
+}
+
+.typography-h2 {
+    @typography-style-h2();
+}
+
+.typography-h2-white {
+    @typography-style-h2();
+
+    margin-bottom: @spacing[5];
+    margin-left: @spacing[6];
+    margin-right: @spacing[6];
+    font-size: @typography-scale[6];
+    color: @ui-colors-primary[white];
+    text-align: center;
+
+    @media @breakpoint-sm-min {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: @typography-scale[5];
+        text-align: left;
+    }
+}
+
+.typography-h3 {
+    @typography-style-h3();
+}
+
+.typography-h4 {
+    @typography-style-h4();
+}
+
+.typography-perex {
+    @typography-style-perex();
+}
+
+.typography-copy {
+
+}

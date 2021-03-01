@@ -1,0 +1,61 @@
+.Form {
+    display: flex;
+
+    input[type="email"] {
+        display: flex;
+        padding: @spacing[3] @spacing[4];
+        margin-right: @spacing[3];
+        border-radius: 50px;
+        border: 0;
+        font-size: @typography-scale[m2];
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input[type="button"] {
+        @typography-style-input-button();
+
+        display: flex;
+        border-radius: 50px;
+        padding: @spacing[3] @spacing[5];
+        background-color: @ui-colors-primary[brighRed];
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lighten(@ui-colors-primary[brighRed], 10%);
+        }
+    }
+
+    input[type="email"] {
+
+      &:invalid:not(:focus):not(:placeholder-shown) {
+        background: pink;
+        & + label {
+          opacity: 0;
+        }
+      }
+
+      // When that invalid input becomes in focus (and also still isn't empty)
+      &:invalid:focus:not(:placeholder-shown) {
+        // Show the more robust requirement instructions below.
+        & ~ .requirements {
+          max-height: 200px;
+          padding: 0 30px 20px 50px;
+        }
+      }
+
+    }
+
+    .requirements {
+      padding: 0 30px 0 50px;
+      color: #999;
+      max-height: 0;
+      transition: 0.28s;
+      overflow: hidden;
+      color: red;
+      font-style: italic;
+    }
+}

@@ -1,0 +1,31 @@
+.Container {
+    min-width: 325px;
+    max-width: 1920px;
+    width: 100%;
+    padding: 0 @spacing[3];
+    margin: 0 auto;
+
+    @media @breakpoint-xs-min {
+        padding: 0 @spacing[4];
+    }
+
+    @media @breakpoint-sm-min {
+        padding: 0 @spacing[0];
+    }
+}
+
+.Container--medium {
+    max-width: 1440px;
+}
+
+.Container--small {
+    max-width: 1260px;
+}
+
+.Container--smaller {
+    max-width: 1124px;
+}
+
+.Container--smallest {
+    max-width: 800px;
+}

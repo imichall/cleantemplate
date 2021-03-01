@@ -1,0 +1,61 @@
+.PreFooterLayout--position {
+    position: relative;
+    overflow: hidden;
+}
+
+.PreFooterLayout {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-gap: @spacing[4];
+    padding: @spacing[7] 0;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+
+    @media @breakpoint-sm-min {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: start;
+        grid-gap: 400px;
+        min-height: 220px;
+    }
+}
+
+.PreFooterLayout_Background--left::before {
+    content: '';
+    display: flex;
+    position: absolute;
+    left: -400px;
+    bottom: -250px;
+    background: url('@{svgDir}bg-tablet-pattern.svg') no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    width: 500px;
+    height: 500px;
+    /* z-index: 1; */
+    opacity: 0.1;
+
+    @media @breakpoint-sm-min {
+        left: 0;
+        bottom: -200px;
+    }
+}
+
+.PreFooterLayout_Background--right::after {
+    content: '';
+    display: none;
+    position: absolute;
+    right: -300px;
+    top: -350px;
+    background: url('@{svgDir}bg-tablet-pattern.svg') no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    width: 500px;
+    height: 500px;
+    /* z-index: 1; */
+    opacity: 0.1;
+
+    @media @breakpoint-sm-min {
+        display: flex;
+    }
+}

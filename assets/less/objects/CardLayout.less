@@ -1,0 +1,48 @@
+.CardLayout {
+    display: grid;
+    padding-top: @spacing[7];
+    margin-top: @spacing[7];
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.CardLayout_Box {
+    .typography-perex;
+
+    position: relative;
+    display: flex;
+    padding: @spacing[7] @spacing[4];
+    justify-items: center;
+    flex-direction: column;
+    background-color: @ui-colors-neutral[lightGray];
+    text-align: center;
+
+    p[data-attr="name"] {
+        @typography-style-cardName();
+
+        margin: @spacing[3] 0;
+    }
+}
+
+.CardLayout_Image {
+    position: absolute;
+    display: flex;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+    img {
+        width: 77px;
+        height: 77px;
+    }
+}
+
+.CardLayout_Bar,
+.CardLayout_Title {
+    display: flex;
+    margin: @spacing[7] 0;
+    justify-content: center;
+    align-items: center;
+}

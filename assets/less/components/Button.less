@@ -1,0 +1,37 @@
+.Button {
+    .u-box-shadow();
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 44px;
+    transition-property: all;
+    transition-duration: .3s;
+}
+
+.Button_Red {
+    .border-radius();
+    .typography-button;
+
+    background-color: @ui-colors-primary[brighRed];
+
+    &:hover {
+        background: lighten(@ui-colors-primary[brighRed], 10%);
+        transition-timing-function: cubic-bezier(.2,1,.7,1);
+    }
+}
+
+.Button_Red--inverted {
+    .border-radius();
+    .typography-button--inverted;
+    .u-box-shadow-inverted();
+
+    background-color: @ui-colors-primary[white];
+
+    &:hover {
+        color: lighten(@ui-colors-primary[brighRed], 15%);
+        transition-timing-function: cubic-bezier(.2,1,.7,1);
+    }
+}
+
