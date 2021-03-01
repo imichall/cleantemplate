@@ -50,11 +50,15 @@
 @typography-style-h3-list: {
     font-family: @typography-font-family-baseMedium;
     font-weight: @typography-font-weight-values[medium];
-    font-size: @typography-scale[2];
+    font-size: @typography-scale[0];
     color: @ui-colors-primary[darkBlue];
     margin-bottom: @spacing[4];
+    line-height: @size[medium];
 
-    line-height: @size[small];
+    @media @breakpoint-sm-min {
+        font-size: @typography-scale[2];
+        line-height: @size[small];
+    }
 }
 
 @typography-style-h4: {
